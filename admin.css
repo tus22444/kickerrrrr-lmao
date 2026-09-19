@@ -1,0 +1,800 @@
+
+/* ==========================================
+   KICKER ADMIN DASHBOARD
+   ========================================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Lexend", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7fbfc;
+    color: #222;
+}
+
+
+/* ==========================================
+   SIDEBAR
+   ========================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 255px;
+    height: 100vh;
+
+    background: white;
+
+    padding: 30px 20px;
+
+    border-right: 1px solid #e8f1f4;
+
+    box-shadow: 4px 0 20px rgba(0, 195, 255, 0.06);
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   KICKER LOGO
+   ========================================== */
+
+.sidebar h1 {
+    color: #00C3FF;
+
+    font-size: 36px;
+    font-weight: 800;
+
+    margin: 0 10px 5px;
+}
+
+.admin-label {
+    color: #999;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin: 0 10px 35px;
+}
+
+
+/* ==========================================
+   SIDEBAR BUTTONS
+   ========================================== */
+
+.sidebar button {
+    width: 100%;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #555;
+
+    padding: 13px 15px;
+
+    margin-bottom: 7px;
+
+    text-align: left;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: #eafaff;
+
+    color: #00C3FF;
+
+    transform: translateX(4px);
+}
+
+
+/* Logout */
+
+.sidebar button:last-child {
+    margin-top: auto;
+
+    color: #555;
+}
+
+.sidebar button:last-child:hover {
+    background: #fff1f1;
+
+    color: #e53935;
+}
+
+
+/* ==========================================
+   MAIN AREA
+   ========================================== */
+
+.main {
+    margin-left: 255px;
+
+    min-height: 100vh;
+
+    padding: 55px 7%;
+}
+
+
+/* ==========================================
+   SECTIONS
+   ========================================== */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    animation: sectionFade 0.35s ease;
+}
+
+.section h2 {
+    margin: 0 0 8px;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    color: #111;
+}
+
+.section > p {
+    color: #888;
+
+    font-size: 15px;
+
+    margin-bottom: 40px;
+}
+
+
+/* ==========================================
+   DASHBOARD WELCOME
+   ========================================== */
+
+#dashboard {
+    padding-top: 10px;
+}
+
+#dashboard::before {
+    content: "KICKER ADMIN";
+
+    display: block;
+
+    color: #00C3FF;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   STAT CARDS
+   ========================================== */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+.stat-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    min-height: 150px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #00C3FF;
+}
+
+.stat-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 195, 255, 0.18);
+}
+
+.stat-card h3 {
+    margin: 5px 0 15px;
+
+    color: #888;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.stat-card p {
+    margin: 0;
+
+    color: #00C3FF;
+
+    font-size: 38px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   ADD PRODUCT BUTTON
+   ========================================== */
+
+.add-btn {
+    background: #00C3FF;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 12px 22px;
+
+    font-family: "Lexend", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #009fd1;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 195, 255, 0.25);
+}
+
+
+/* ==========================================
+   PRODUCT ADMIN CARDS
+   ========================================== */
+
+.product-admin-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-admin-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 195, 255, 0.15);
+}
+
+
+/* Product image */
+
+.product-admin-card img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eafaff,
+            #ffffff
+        );
+}
+
+
+/* Product information */
+
+.product-admin-card h3 {
+    margin: 0 0 7px;
+
+    color: #222;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+.product-admin-card p {
+    margin: 5px 0;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* Delete */
+
+.product-admin-card button {
+    background: #fff1f1;
+
+    color: #e53935;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 8px 13px;
+
+    font-family: "Lexend", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-top: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.product-admin-card button:hover {
+    background: #e53935;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   ADD PRODUCT FORM
+   ========================================== */
+
+form {
+    max-width: 650px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #dfe7eb;
+
+    border-radius: 8px;
+
+    background: #fafcfd;
+
+    color: #333;
+
+    font-family: "Lexend", sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #00C3FF;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 195, 255, 0.1);
+}
+
+form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 13px;
+
+    background: #00C3FF;
+
+    color: white;
+
+    font-family: "Lexend", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #009fd1;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   USERS
+   ========================================== */
+
+.user-card {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 195, 255, 0.13);
+}
+
+.user-card h3 {
+    margin: 0 0 8px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.user-card p {
+    margin: 5px 0;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   ORDERS
+   ========================================== */
+
+.order-card {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 195, 255, 0.13);
+}
+
+.order-card h3 {
+    color: #00C3FF;
+
+    margin: 0 0 10px;
+
+    font-size: 17px;
+}
+
+.order-card p {
+    margin: 6px 0;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   ADMIN PROFILE
+   ========================================== */
+
+#adminProfile {
+    max-width: 550px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+#adminProfile h3 {
+    margin: 0 0 20px;
+
+    color: #00C3FF;
+
+    font-size: 26px;
+
+    font-weight: 700;
+}
+
+#adminProfile p {
+    margin: 10px 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kicker-logo {
+    top: 25px;
+    left: 30px;
+}
+
+.kicker-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #00C3FF;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+        font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+    text-decoration: none;
+}
+
+.kicker-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   HIDDEN
+   ========================================== */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   ANIMATION
+   ========================================== */
+
+@keyframes sectionFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main {
+        margin-left: 210px;
+
+        padding: 40px 5%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #e8f1f4;
+    }
+
+    .sidebar button:last-child {
+        margin-top: 10px;
+    }
+
+    .main {
+        margin-left: 0;
+
+        padding: 40px 5%;
+    }
+
+    .section h2 {
+        font-size: 32px;
+    }
+
+    .product-admin-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

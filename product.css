@@ -1,0 +1,934 @@
+/* ==========================================
+RESET
+========================================== */
+
+html,
+body {
+margin: 0;
+padding: 0;
+}
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Lexend", sans-serif;
+background: #f7fbfc;
+color: #222;
+}
+
+/* ==========================================
+NAVBAR
+========================================== */
+.logout-btn {
+    color:white
+}
+.navbar {
+background-color: white;
+padding: 10px 25px;
+
+ 
+position: fixed;
+top: 0;
+left: 0;
+
+width: 100%;
+z-index: 1000;
+ 
+
+}
+
+.navdiv {
+color: #00C3FF;
+
+ 
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+font-family: "Lexend", sans-serif;
+font-weight: 400;
+ 
+
+}
+
+/* Navigation */
+
+nav ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+nav ul li {
+display: inline;
+margin-right: 30px;
+}
+
+.navdiv ul li a {
+color: #00C3FF;
+font-size: 18px;
+
+ 
+transition: all 0.3s ease;
+ 
+
+}
+
+.navdiv ul li a:hover {
+color: #111;
+}
+
+/* ==========================================
+LOGO
+========================================== */
+
+.logo a {
+display: flex;
+align-items: center;
+
+ 
+gap: 12px;
+
+color: #00C3FF;
+font-size: 34px;
+font-weight: 600;
+ 
+
+}
+
+.logo img {
+width: 65px;
+height: 65px;
+
+ 
+object-fit: contain;
+ 
+
+}
+
+/* ==========================================
+ACCOUNT AREA
+========================================== */
+
+#accountArea {
+display: inline-flex;
+align-items: center;
+
+ 
+gap: 10px;
+
+margin-right: 0;
+padding: 0;
+ 
+
+}
+
+#accountArea button {
+background-color: #00C3FF;
+
+ 
+border: none;
+border-radius: 7px;
+
+padding: 11px 20px;
+
+font-size: 16px;
+font-family: "Lexend", sans-serif;
+
+cursor: pointer;
+
+transition: all 0.3s ease;
+ 
+
+}
+
+#accountArea button:hover {
+background-color: #009fd1;
+
+ 
+transform: translateY(-2px);
+ 
+
+}
+
+#accountArea button a {
+color: white;
+
+ 
+font-family: "Lexend", sans-serif;
+font-weight: 400;
+ 
+
+}
+
+#accountArea .welcome-user {
+display: flex;
+align-items: center;
+
+ 
+color: #00C3FF;
+
+font-family: "Lexend", sans-serif;
+font-size: 16px;
+font-weight: 600;
+ 
+
+}
+
+#accountArea .nav-cart {
+display: flex;
+align-items: center;
+
+ 
+color: #00C3FF;
+
+font-family: "Lexend", sans-serif;
+font-size: 16px;
+font-weight: 600;
+ 
+
+}
+
+#cartCount {
+display: inline-flex;
+
+ 
+align-items: center;
+justify-content: center;
+
+min-width: 20px;
+height: 20px;
+
+padding: 0 5px;
+margin-left: 4px;
+
+background: #00C3FF;
+color: white;
+
+border-radius: 50%;
+
+font-size: 11px;
+ 
+
+}
+
+#accountArea #logoutButton {
+background-color: #00C3FF;
+
+ 
+color: white;
+
+border: none;
+border-radius: 7px;
+
+padding: 11px 20px;
+
+font-family: "Lexend", sans-serif;
+font-size: 16px;
+
+cursor: pointer;
+
+transition: all 0.3s ease;
+ 
+
+}
+
+#accountArea #logoutButton:hover {
+background-color: #009fd1;
+
+ 
+transform: translateY(-2px);
+ 
+
+}
+
+/* ==========================================
+PRODUCT PAGE
+========================================== */
+
+.product-page {
+min-height: 100vh;
+
+ 
+padding: 150px 8% 100px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+gap: 80px;
+
+background: #f7fbfc;
+ 
+
+}
+
+/* ==========================================
+PRODUCT IMAGE
+========================================== */
+
+.product-page .product-image {
+width: 550px;
+height: 500px;
+
+ 
+background: linear-gradient(
+    135deg,
+    #eafaff,
+    #ffffff
+);
+
+border-radius: 25px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+overflow: hidden;
+
+box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+ 
+
+}
+
+.product-page .product-image:hover {
+transform: translateY(-8px);
+
+ 
+box-shadow:
+    0 15px 35px rgba(0, 195, 255, 0.2);
+ 
+
+}
+
+.product-page .product-image img {
+width: 120%;
+height: 120%;
+
+ 
+object-fit: contain;
+
+transition:
+    transform 0.4s ease;
+ 
+
+}
+
+.product-page .product-image:hover img {
+transform:
+scale(1.08)
+rotate(-2deg);
+}
+
+/* ==========================================
+PRODUCT INFORMATION
+========================================== */
+
+.product-info {
+width: 500px;
+
+ 
+font-family: "Lexend", sans-serif;
+ 
+
+}
+
+#productId {
+color: #00C3FF;
+
+ 
+font-size: 14px;
+font-weight: 600;
+
+letter-spacing: 3px;
+
+margin-bottom: 15px;
+ 
+
+}
+
+#productName {
+color: #111;
+
+ 
+font-size: 48px;
+line-height: 1.1;
+
+font-weight: 800;
+
+margin: 0 0 20px;
+ 
+
+}
+
+#productDescription {
+color: #777;
+
+ 
+font-size: 17px;
+line-height: 1.6;
+
+margin: 0 0 25px;
+ 
+
+}
+
+#productPrice {
+display: block;
+
+ 
+color: #00C3FF;
+
+font-size: 30px;
+font-weight: 700;
+
+margin-bottom: 30px;
+ 
+
+}
+
+/* ==========================================
+BACK BUTTON
+========================================== */
+
+.back-button {
+display: inline-block;
+
+ 
+color: #00C3FF;
+
+font-size: 14px;
+font-weight: 600;
+
+margin-bottom: 25px;
+
+transition: all 0.3s ease;
+ 
+
+}
+
+.back-button:hover {
+color: #111;
+
+ 
+transform: translateX(-3px);
+ 
+
+}
+
+/* ==========================================
+QUANTITY
+========================================== */
+
+.quantity-section {
+margin-top: 30px;
+}
+
+.quantity-section p {
+margin: 0 0 10px;
+
+ 
+color: #555;
+
+font-size: 14px;
+font-weight: 600;
+ 
+
+}
+
+.quantity-box {
+display: flex;
+align-items: center;
+
+ 
+width: 145px;
+height: 45px;
+
+border: 1px solid #ddd;
+border-radius: 8px;
+
+overflow: hidden;
+
+background: white;
+ 
+
+}
+
+.quantity-box button {
+width: 45px;
+height: 100%;
+
+ 
+border: none;
+
+background: #f1f1f1;
+color: #222;
+
+font-family: "Lexend", sans-serif;
+font-size: 20px;
+
+cursor: pointer;
+
+transition: 0.3s ease;
+ 
+
+}
+
+.quantity-box button:hover {
+background: #00C3FF;
+color: white;
+}
+
+.quantity-box span {
+flex: 1;
+
+ 
+text-align: center;
+
+font-family: "Lexend", sans-serif;
+
+font-size: 16px;
+font-weight: 600;
+ 
+
+}
+
+/* ==========================================
+PRODUCT ACTIONS
+========================================== */
+
+.product-actions {
+display: flex;
+align-items: center;
+
+ 
+gap: 10px;
+
+margin-top: 15px;
+ 
+
+}
+
+/* ==========================================
+ADD TO CART
+========================================== */
+
+.product-actions .add-cart-btn {
+flex: 1;
+
+ 
+border: none;
+border-radius: 8px;
+
+padding: 13px 20px;
+
+background: #00C3FF;
+color: white;
+
+font-family: "Lexend", sans-serif;
+
+font-size: 15px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition: all 0.3s ease;
+ 
+
+}
+
+.product-actions .add-cart-btn:hover {
+background: #009fd1;
+
+ 
+transform: translateY(-2px);
+
+box-shadow:
+    0 8px 20px rgba(0, 195, 255, 0.2);
+ 
+
+}
+
+/* ==========================================
+WISHLIST
+========================================== */
+
+.product-actions .wishlist-btn {
+width: 52px;
+height: 48px;
+
+ 
+border: none;
+border-radius: 8px;
+
+background: #f1f1f1;
+color: #222;
+
+font-size: 24px;
+
+cursor: pointer;
+
+transition: all 0.3s ease;
+ 
+
+}
+
+.product-actions .wishlist-btn:hover {
+background: #ffe5eb;
+
+ 
+transform: translateY(-2px);
+ 
+
+}
+
+/* ==========================================
+RECOMMENDED SHOES
+========================================== */
+
+.recommended-section {
+background: #f7fbfc;
+
+ 
+padding: 80px 8% 100px;
+
+text-align: center;
+ 
+
+}
+
+.recommended-section h2 {
+margin: 0;
+
+ 
+color: #222;
+
+font-family: "Lexend", sans-serif;
+
+font-size: 45px;
+font-weight: 800;
+ 
+
+}
+
+.recommended-subtitle {
+margin-top: 10px;
+margin-bottom: 45px;
+
+ 
+color: #888;
+
+font-family: "Lexend", sans-serif;
+
+font-size: 15px;
+ 
+
+}
+
+.recommended-grid {
+display: grid;
+
+ 
+grid-template-columns: repeat(4, 1fr);
+
+gap: 25px;
+ 
+
+}
+
+/* ==========================================
+RECOMMENDED CARD
+========================================== */
+
+.recommended-card {
+background: white;
+
+ 
+border-radius: 18px;
+
+padding: 18px;
+
+text-align: left;
+
+box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+overflow: hidden;
+ 
+
+}
+
+.recommended-card:hover {
+transform: translateY(-8px);
+
+ 
+box-shadow:
+    0 15px 35px rgba(0, 195, 255, 0.2);
+ 
+
+}
+
+.recommended-link {
+display: block;
+
+ 
+color: inherit;
+
+text-decoration: none;
+ 
+
+}
+
+/* ==========================================
+RECOMMENDED IMAGE
+========================================== */
+
+.recommended-image {
+height: 230px;
+
+ 
+background: linear-gradient(
+    135deg,
+    #eafaff,
+    #ffffff
+);
+
+border-radius: 14px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+margin-bottom: 20px;
+
+overflow: hidden;
+ 
+
+}
+
+.recommended-image img {
+width: 140%;
+height: 140%;
+
+ 
+object-fit: contain;
+
+transition:
+    transform 0.4s ease;
+ 
+
+}
+
+.recommended-card:hover .recommended-image img {
+transform:
+scale(1.12)
+rotate(-2deg);
+}
+
+/* ==========================================
+RECOMMENDED TEXT
+========================================== */
+
+.recommended-card h3 {
+margin: 5px 0;
+
+ 
+color: #222;
+
+font-family: "Lexend", sans-serif;
+
+font-size: 20px;
+font-weight: 700;
+ 
+
+}
+
+.recommended-card p {
+margin: 5px 0 15px;
+
+ 
+color: #888;
+
+font-family: "Lexend", sans-serif;
+
+font-size: 13px;
+ 
+
+}
+
+.recommended-card strong {
+color: #00C3FF;
+
+ 
+font-family: "Lexend", sans-serif;
+
+font-size: 19px;
+ 
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+
+ 
+.product-page {
+    gap: 40px;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.product-page .product-image {
+    width: 50%;
+    height: 450px;
+}
+
+.product-info {
+    width: 45%;
+}
+
+#productName {
+    font-size: 40px;
+}
+
+.recommended-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+ 
+
+}
+
+/* ==========================================
+TABLET
+========================================== */
+
+@media (max-width: 800px) {
+
+ 
+.product-page {
+    flex-direction: column;
+
+    padding-top: 130px;
+
+    gap: 40px;
+}
+
+.product-page .product-image {
+    width: 90%;
+    height: 450px;
+}
+
+.product-info {
+    width: 90%;
+
+    text-align: center;
+}
+
+.product-actions {
+    justify-content: center;
+}
+
+.quantity-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#productName {
+    font-size: 38px;
+}
+ 
+
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+ 
+.navbar {
+    padding: 8px 15px;
+}
+
+.logo a {
+    font-size: 25px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+.navdiv ul li a {
+    font-size: 13px;
+}
+
+.product-page {
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+
+.product-page .product-image {
+    width: 100%;
+    height: 350px;
+}
+
+.product-info {
+    width: 100%;
+}
+
+#productName {
+    font-size: 30px;
+}
+
+#productDescription {
+    font-size: 14px;
+}
+
+#productPrice {
+    font-size: 27px;
+}
+
+.recommended-section {
+    padding: 60px 5px 80px;
+}
+
+.recommended-grid {
+    grid-template-columns: 1fr;
+}
+
+.recommended-section h2 {
+    font-size: 35px;
+}
+
+.quantity-box {
+    width: 130px;
+}
+ 
+
+}

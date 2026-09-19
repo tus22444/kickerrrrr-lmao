@@ -1,0 +1,824 @@
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Kicker - Under $500</title>
+
+    <link
+        rel="stylesheet"
+        href="kids.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         STORAGE / ACCOUNT SYSTEM
+    ========================================== -->
+
+    <script src="storage.js"></script>
+
+
+
+    <!-- ==========================================
+         NAVBAR
+    ========================================== -->
+
+    <nav class="navbar">
+
+        <div class="navdiv">
+
+            <div class="logo">
+
+                <a href="introduction.html">
+
+                    <img
+                        src="fotos/ssasa.png"
+                        alt="Kicker Logo"
+                    >
+
+                    Kicker
+
+                </a>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+
+                    <a href="introduction.html">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="introduction.html#about">
+                        About
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="introduction.html#contacts">
+                        Contacts
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a
+                        href="introduction.html#allShoesGrid"
+                        class="back-btn"
+                    >
+                        ← Back
+                    </a>
+
+                </li>
+
+
+                <!-- Dynamic Account Area -->
+
+                <li id="accountArea"></li>
+<li id="adminArea"></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==========================================
+         CATEGORY HERO
+    ========================================== -->
+
+    <section class="category-hero">
+
+
+        <!-- Floating Decorations -->
+
+        <div class="floating-one"></div>
+
+        <div class="floating-two"></div>
+
+        <div class="floating-circle circle-1"></div>
+
+        <div class="floating-circle circle-2"></div>
+
+        <div class="floating-circle circle-3"></div>
+
+
+        <div class="floating-bolt">
+            ⚡
+        </div>
+
+
+        <div class="floating-star">
+            ✦
+        </div>
+
+
+        <p id="heroSubtitle">
+
+            BIG PERFORMANCE. SMALLER PRICE.
+
+        </p>
+
+
+        <h1 id="heroTitle">
+
+            UNDER $500
+
+        </h1>
+
+
+        <span id="heroDescription">
+
+            Great football shoes without breaking the budget.
+
+        </span>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         PRODUCT FILTERS
+    ========================================== -->
+
+    <div class="decorations">
+
+
+        <!-- Budget Friendly -->
+
+        <a
+            href="under500.html#budget"
+            class="decoration filter-btn"
+        >
+
+            💰
+
+            <span>
+                Budget Friendly
+            </span>
+
+        </a>
+
+
+        <!-- Lightweight -->
+
+        <a
+            href="under500.html#lightweight"
+            class="decoration filter-btn"
+        >
+
+            ⚡
+
+            <span>
+                Lightweight
+            </span>
+
+        </a>
+
+
+        <!-- Performance -->
+
+        <a
+            href="under500.html#performance"
+            class="decoration filter-btn"
+        >
+
+            🔥
+
+            <span>
+                Performance
+            </span>
+
+        </a>
+
+
+        <!-- Great Value -->
+
+        <a
+            href="under500.html#value"
+            class="decoration filter-btn"
+        >
+
+            👟
+
+            <span>
+                Great Value
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- ==========================================
+         PRODUCTS
+    ========================================== -->
+
+    <section
+        class="products"
+        id="under500Products"
+    >
+
+
+        <!-- ==========================================
+             SECTION TITLE
+        ========================================== -->
+
+        <div class="section-title">
+
+
+            <p id="collectionTitle">
+
+                KICKER VALUE COLLECTION
+
+            </p>
+
+
+            <h2 id="sectionHeading">
+
+                Football Shoes Under $500
+
+            </h2>
+
+
+            <span id="sectionDescription">
+
+                Great football shoes at prices that keep
+                your budget onside.
+
+            </span>
+
+
+        </div>
+
+
+
+        <!-- ==========================================
+             PRODUCT GRID
+        ========================================== -->
+
+        <div
+            class="product-grid"
+            id="under500ShoesGrid"
+        >
+
+
+            <!-- ==========================================
+                 PRODUCT 1
+            ========================================== -->
+
+            <div
+                class="product-card"
+                id="product1"
+                data-product-id="1"
+                data-product-name="Nike Phantom Academy"
+                data-product-price="105"
+                data-product-image="fotos/PHANTOM+6+LOW+ACAD+FG_MG+EH.avif"
+                data-tags="budget lightweight performance value"
+            >
+
+
+                <div class="product-image">
+
+                    <img
+                        src="fotos/PHANTOM+6+LOW+ACAD+FG_MG+EH.avif"
+                        alt="Nike Phantom Academy"
+                    >
+
+                </div>
+
+
+                <h3>
+
+                    Nike Phantom Academy
+
+                </h3>
+
+
+                <p>
+
+                    Multi-Ground Football Cleats
+
+                </p>
+
+
+                <strong>
+
+                    $105
+
+                </strong>
+
+
+                <a
+                    href="product.html?id=1"
+                    class="view-product"
+                >
+
+                    View Product →
+
+                </a>
+
+
+                <div class="product-buttons">
+
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                    >
+
+                        Add to Cart 🛒
+
+                    </button>
+
+
+                    <button
+                        class="wishlist-btn"
+                        type="button"
+                        aria-label="Add Nike Phantom Academy to wishlist"
+                    >
+
+                        ♡
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 PRODUCT 2
+            ========================================== -->
+
+            <div
+                class="product-card"
+                id="product2"
+                data-product-id="2"
+                data-product-name="Nike Mercurial Vapor Academy"
+                data-product-price="120"
+                data-product-image="fotos/VAPOR+17+ACADEMY+FG_MG.avif"
+                data-tags="budget lightweight performance"
+            >
+
+
+                <div class="product-image">
+
+                    <img
+                        src="fotos/VAPOR+17+ACADEMY+FG_MG.avif"
+                        alt="Nike Mercurial Vapor Academy"
+                    >
+
+                </div>
+
+
+                <h3>
+
+                    Nike Mercurial Vapor Academy
+
+                </h3>
+
+
+                <p>
+
+                    Multi-Ground Football Cleats
+
+                </p>
+
+
+                <strong>
+
+                    $120
+
+                </strong>
+
+
+                <a
+                    href="product.html?id=2"
+                    class="view-product"
+                >
+
+                    View Product →
+
+                </a>
+
+
+                <div class="product-buttons">
+
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                    >
+
+                        Add to Cart 🛒
+
+                    </button>
+
+
+                    <button
+                        class="wishlist-btn"
+                        type="button"
+                        aria-label="Add Nike Mercurial Vapor Academy to wishlist"
+                    >
+
+                        ♡
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 PRODUCT 3
+            ========================================== -->
+
+            <div
+                class="product-card"
+                id="product3"
+                data-product-id="3"
+                data-product-name="Nike Zoom Vapor Academy"
+                data-product-price="95"
+                data-product-image="fotos/ZOOM+VAPOR+16+ACADEMY+IC.avif"
+                data-tags="budget lightweight value"
+            >
+
+
+                <div class="product-image">
+
+                    <img
+                        src="fotos/ZOOM+VAPOR+16+ACADEMY+IC.avif"
+                        alt="Nike Zoom Vapor Academy"
+                    >
+
+                </div>
+
+
+                <h3>
+
+                    Nike Zoom Vapor Academy
+
+                </h3>
+
+
+                <p>
+
+                    Indoor/Court Football Shoes
+
+                </p>
+
+
+                <strong>
+
+                    $95
+
+                </strong>
+
+
+                <a
+                    href="product.html?id=3"
+                    class="view-product"
+                >
+
+                    View Product →
+
+                </a>
+
+
+                <div class="product-buttons">
+
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                    >
+
+                        Add to Cart 🛒
+
+                    </button>
+
+
+                    <button
+                        class="wishlist-btn"
+                        type="button"
+                        aria-label="Add Nike Zoom Vapor Academy to wishlist"
+                    >
+
+                        ♡
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 PRODUCT 4
+            ========================================== -->
+
+            <div
+                class="product-card"
+                id="product4"
+                data-product-id="4"
+                data-product-name="Nike Phantom Elite"
+                data-product-price="275"
+                data-product-image="fotos/PHANTOM+6+LOW+ELITE+AG-PRO (1).avif"
+                data-tags="performance lightweight"
+            >
+
+
+                <div class="product-image">
+
+                    <img
+                        src="fotos/PHANTOM+6+LOW+ELITE+AG-PRO (1).avif"
+                        alt="Nike Phantom Elite"
+                    >
+
+                </div>
+
+
+                <h3>
+
+                    Nike Phantom Elite
+
+                </h3>
+
+
+                <p>
+
+                    Artificial-Grass Football Cleats
+
+                </p>
+
+
+                <strong>
+
+                    $275
+
+                </strong>
+
+
+                <a
+                    href="product.html?id=4"
+                    class="view-product"
+                >
+
+                    View Product →
+
+                </a>
+
+
+                <div class="product-buttons">
+
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                    >
+
+                        Add to Cart 🛒
+
+                    </button>
+
+
+                    <button
+                        class="wishlist-btn"
+                        type="button"
+                        aria-label="Add Nike Phantom Elite to wishlist"
+                    >
+
+                        ♡
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer
+        class="footer"
+        id="about"
+    >
+
+
+        <div class="footer-content">
+
+
+            <!-- Footer Logo -->
+
+            <div class="footer-logo">
+
+                <img
+                    src="fotos/Untitled.png"
+                    alt="Kicker Logo"
+                >
+
+                <span>
+                    Kicker
+                </span>
+
+            </div>
+
+
+
+            <!-- About -->
+
+            <div class="footer-description">
+
+                <h2>
+
+                    About Kicker
+
+                </h2>
+
+
+                <p>
+
+                    Kicker is a football shoes marketing website
+                    created by Duc Minh.
+
+                </p>
+
+
+                <p>
+
+                    This project was made by a 14-year-old who loves
+                    football, design, and web development.
+                    Kicker was created to bring those interests together
+                    in one website.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div
+                class="footer-contact"
+                id="contacts"
+            >
+
+                <h2>
+
+                    Contact
+
+                </h2>
+
+
+                <p>
+
+                    Have a question or suggestion?
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Owner:
+                    </strong>
+
+                    Duc Minh
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Email:
+                    </strong>
+
+                    your-email@example.com
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Footer Links -->
+
+            <div class="footer-links">
+
+
+                <a href="introduction.html">
+
+                    Home
+
+                </a>
+
+
+                <a href="#about">
+
+                    About
+
+                </a>
+
+
+                <a href="#contacts">
+
+                    Contacts
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- Copyright -->
+
+            <p class="footer-copy">
+
+                © 2026 Kicker. Made with passion ⚽
+
+            </p>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         SHARED JAVASCRIPT
+    ========================================== -->
+
+    <script src="shit.js"></script>
+
+
+</body>
+
+</html>
+```

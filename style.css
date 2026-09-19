@@ -1,0 +1,1115 @@
+
+.kicker-logo {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+.kicker-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: White;
+    font-size: 37px;
+    font-weight: 700;
+    text-decoration: none;
+        font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+    text-decoration: none;
+}
+
+.kicker-logo img {
+    width: 70px;
+    height: 75px;
+    object-fit: contain;
+}
+
+
+
+
+/* ==========================================
+   KICKER AI CHAT
+========================================== */
+
+/* Floating chat button */
+.corner-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #00C3FF;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.25s ease;
+
+    font-family: "Lexend", sans-serif;
+}
+
+.corner-button:hover {
+    transform: scale(1.08);
+    background: #009fd1;
+}
+
+
+/* ==========================================
+   CHAT WINDOW
+========================================== */
+
+.thaycongbeo {
+    position: fixed;
+
+    right: 25px;
+    bottom: 95px;
+
+    width: 350px;
+    height: 500px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+
+    display: none;
+    flex-direction: column;
+
+    z-index: 9998;
+
+    font-family: "Lexend", sans-serif;
+}
+
+
+/* ==========================================
+   CHAT HEADER
+========================================== */
+
+.chat-header {
+    height: 70px;
+
+    background: #00C3FF;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+}
+
+.bot-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bot-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.bot-info h3 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bot-info span {
+    font-size: 12px;
+    color: #eaffff;
+}
+
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.close-button {
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.close-button:hover {
+    transform: scale(1.15);
+}
+
+
+/* ==========================================
+   CHAT BODY
+========================================== */
+
+.chat-body {
+    flex: 1;
+
+    padding: 18px;
+
+    overflow-y: auto;
+
+    background: #f7fbfc;
+
+    font-family: "Lexend", sans-serif;
+}
+
+
+/* Messages */
+
+.message {
+    margin-bottom: 15px;
+}
+
+.message-name {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+    color: #555;
+}
+
+.bubble {
+    display: inline-block;
+
+    padding: 10px 14px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    max-width: 80%;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   USER MESSAGE
+========================================== */
+
+.user-message {
+    text-align: right;
+}
+
+.user-message .message-name {
+    color: #00C3FF;
+}
+
+.user-message .bubble {
+    background: #00C3FF;
+    color: white;
+
+    text-align: left;
+}
+
+
+/* ==========================================
+   AI MESSAGE
+========================================== */
+
+.ai-message {
+    text-align: left;
+}
+
+.ai-message .bubble {
+    background: white;
+    color: #222;
+}
+
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.chat-input {
+    display: flex;
+
+    padding: 12px;
+
+    background: white;
+
+    border-top: 1px solid #eee;
+
+    gap: 8px;
+}
+
+.chat-input input {
+    flex: 1;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    padding: 10px 14px;
+
+    outline: none;
+
+    font-family: "Lexend", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.chat-input input:focus {
+    border-color: #00C3FF;
+
+    box-shadow: 0 0 0 2px rgba(0, 195, 255, 0.1);
+}
+
+
+/* Send button */
+
+.chat-input button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #00C3FF;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.chat-input button:hover {
+    background: #009fd1;
+
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .thaycongbeo {
+        right: 15px;
+        bottom: 85px;
+
+        width: calc(100% - 30px);
+
+        height: 70vh;
+    }
+
+    .corner-button {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   KICKER AI CHAT BUTTON
+========================================== */
+
+.corner-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #00c3ff;
+    color: white;
+
+    font-size: 26px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 25px rgba(0, 195, 255, 0.35);
+
+    z-index: 9999;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.corner-button:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 10px 30px rgba(0, 195, 255, 0.5);
+}
+
+.corner-button:active {
+    transform: scale(0.95);
+}
+
+
+/* ==========================================
+   CHAT WINDOW
+========================================== */
+
+.thaycongbeo {
+    position: fixed;
+
+    right: 25px;
+    bottom: 95px;
+
+    width: 350px;
+    height: 500px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.2);
+
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    z-index: 10000;
+}
+
+
+/* ==========================================
+   CHAT HEADER
+========================================== */
+
+.chat-header {
+    height: 70px;
+
+    background: #00c3ff;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+}
+
+.bot-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bot-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.bot-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.bot-info span {
+    font-size: 12px;
+}
+
+.close-button {
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   CHAT BODY
+========================================== */
+
+.chat-body {
+    flex: 1;
+
+    padding: 15px;
+
+    overflow-y: auto;
+
+    background: #f7f9fb;
+}
+
+.message {
+    margin-bottom: 15px;
+}
+
+.message-name {
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.bubble {
+    display: inline-block;
+
+    max-width: 80%;
+
+    padding: 10px 14px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+.ai-message .bubble {
+    background: #e8f8ff;
+    color: #222;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.user-message .bubble {
+    background: #00c3ff;
+    color: white;
+}
+
+
+/* ==========================================
+   CHAT INPUT
+========================================== */
+
+.chat-input {
+    display: flex;
+
+    padding: 12px;
+
+    background: white;
+
+    border-top: 1px solid #eee;
+}
+
+.chat-input input {
+    flex: 1;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    padding: 10px 14px;
+
+    outline: none;
+
+    font-family: "Lexend", sans-serif;
+}
+
+.chat-input button {
+    width: 42px;
+    height: 42px;
+
+    margin-left: 8px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #00c3ff;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#box {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    max-width: calc(100% - 30px);
+
+    height: auto;
+
+    padding: 30px 40px;
+    box-sizing: border-box;
+
+    background-color: white;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+#memay {
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between the text and link */
+    margin-top:10px;
+}
+
+#memay p {
+    margin: 1px;
+}
+
+#memay a {
+    font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+    text-decoration: none;
+    color:#00C3FF;
+}
+
+#ok {
+    color:gray;
+    justify-self: center;
+    align-self: center;
+    margin-top: -10px; /* Move it upward */
+    margin-bottom: 10px;
+}
+div h1 {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+div p{
+      font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;   
+    padding-left: 0px;
+}
+div h1 {
+    align-self: center;
+    justify-self: center;
+}
+#box input[type="email"] {    
+        width: 300px;              
+        padding: 10px;            
+        font-size: 16px; 
+        border-radius: 10px;
+        justify-self: center;
+        outline: none;
+        border: none;
+        background-color: rgb(233, 233, 233);
+
+    }
+#box input[type="email"]:focus {
+    animation: fadeIn 0.25s ease-in forwards;
+    outline:none;
+    
+    box-shadow: 0 0 0 2px #00C3FF;
+}
+
+#box input[type="password"],
+#box input[type="confirmpassword"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    justify-self: center;
+    outline: none;
+    border: none;
+    background-color: rgb(233, 233, 233);
+}
+
+#box input[type="password"]:focus,
+#box input[type="confirmpassword"]:focus {
+    animation: fadeIn 0.25s ease-in forwards;
+    outline: none;
+    box-shadow: 0 0 0 2px #00C3FF;
+}
+#box input[type="username"] {    
+        width: 300px;              
+        padding: 10px;            
+        font-size: 16px; 
+        border-radius: 10px;
+        justify-self: center;
+        outline: none;
+        border: none;
+        background-color: rgb(233, 233, 233);
+
+    }
+#box input[type="username"]:focus {
+    animation: fadeIn 0.25s ease-in forwards;
+    outline:none;
+    
+    box-shadow: 0 0 0 2px #00C3FF;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }   /* Start fully transparent */
+    to { opacity: 1; }     /* End fully visible */
+}
+input[type="button"] {
+      font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    margin-top: 30px;
+    background: #ff5959;
+    background: linear-gradient(-45deg,#b2fafe 0%,#00C3FF 50%, #0ED2F7 100%);
+    width: 100px;
+    height: 40px;
+    justify-self: center;
+    border-radius:7px;
+    border:none;
+    color:white;
+    transition: all 0.3s ease-in-out;
+}
+input[type="button"]:hover {
+    transform: scale(1.05); /* Slightly bigger */
+    background: linear-gradient(-45deg, #8ae6ea 0%, #00a8df 50%, #0cb4d4 100%);
+}
+
+
+
+
+body {
+background: linear-gradient(-45deg,#b2fafe 0%,#00C3FF 50%, #0ED2F7 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.corner-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;      /* Perfect circle */
+
+    background: white;
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    transition: transform .25s ease, box-shadow .25s ease;
+
+    z-index: 999;
+}
+
+.corner-button:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 12px rgba(0,195,255,.5);
+}
+/* Floating chat button 
+/* Chat Window */
+.thaycongbeo{
+    position: fixed;
+    right: 20px;
+
+    width: 350px;
+    height: 500px;
+
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;
+    z-index: 1000;
+
+}
+
+.thaycongbeo{
+    bottom: 10px;
+}
+
+.chat-body{
+    flex: 1;              /* Takes all remaining space */
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+
+    padding: 15px;
+    background: #f5f5f5;
+}
+/* ==========================
+   HEADER
+========================== */
+
+.chat-header{
+    background: #00C3FF;
+    color: white;   
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px;
+    flex-shrink:0;
+}
+
+.bot-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.bot-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:white;
+    color:#d32f2f;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+}
+
+.bot-info h3{
+    margin:0;
+    font-size:17px;
+}
+
+.bot-info span{
+    font-size:12px;
+    color:#b8ffb8;
+}
+
+.close-button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* ==========================
+   CHAT BODY
+========================== */
+
+/* ==========================
+   MESSAGES
+========================== */
+
+.message{
+    max-width:75%;
+    padding:10px 14px;
+    border-radius:15px;
+    line-height:1.4;
+    font-size:14px;
+    word-wrap:break-word;
+}
+
+.bot{
+    background:white;
+    align-self:flex-start;
+    border-bottom-left-radius:5px;
+}
+
+.user{
+    background:#d32f2f;
+    color:white;    
+    align-self:flex-end;
+    border-bottom-right-radius:5px;
+}
+
+/* ==========================
+   INPUT AREA
+========================== */
+
+.chat-input{
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+.chat-input input{
+    border: 1px solid black;
+    flex: 1;
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+.chat-input button{
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    background: linear-gradient(135deg, #00C3FF, #0ED2F7);
+    color:white;
+
+    cursor:pointer;
+    font-size:18px;
+    transition:0.25s ease;
+}
+
+.chat-input button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 12px rgba(0,195,255,.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.message-name {
+    font-size: 11px;
+    margin-bottom: 4px;
+    opacity: 0.6;
+}
+
+.bubble {
+    padding: 10px 14px;
+    border-radius: 16px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* AI */
+.ai-message {
+    align-self: flex-start;
+}
+
+.ai-message .bubble {
+    background: #eeeeee;
+    color: black;
+    border-bottom-left-radius: 4px;
+}
+
+/* YOU */
+.user-message {
+    align-self: flex-end;
+}
+
+.user-message .bubble {
+    background: black;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

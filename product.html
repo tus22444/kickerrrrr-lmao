@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kicker - Product</title>
+
+<link rel="stylesheet" href="product.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+    rel="stylesheet">
+   
+
+</head>
+
+<body>
+
+   
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<nav class="navbar">
+
+<div class="navdiv">
+
+    <div class="logo">
+
+        <a href="introduction.html">
+
+            <img src="fotos/ssasa.png" alt="Kicker">
+
+            Kicker
+
+        </a>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="introduction.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="introduction.html#about">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="introduction.html#contacts">
+                Contacts
+            </a>
+        </li>
+
+        <li id="accountArea"></li>
+
+    </ul>
+
+</div>
+
+</nav>
+
+
+<!-- ==========================================
+     PRODUCT
+========================================== -->
+
+<main class="product-page">
+
+    <div class="product-image">
+
+        <img
+            id="productImage"
+            src=""
+            alt=""
+        >
+
+    </div>
+
+
+    <div class="product-info">
+
+        <a href="introduction.html" class="back-button">
+            ← Back to Collection
+        </a>
+
+        <p id="productId"></p>
+
+        <h1 id="productName">
+            Product Name
+        </h1>
+
+        <p id="productDescription">
+            Product description
+        </p>
+
+        <strong id="productPrice">
+            $0
+        </strong>
+
+
+        <!-- QUANTITY -->
+
+        <div class="quantity-section">
+
+            <p>Quantity</p>
+
+            <div class="quantity-box">
+
+                <button id="minusBtn">
+                    −
+                </button>
+
+                <span id="quantity">
+                    1
+                </span>
+
+                <button id="plusBtn">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="product-actions">
+
+            <button
+                id="addCartBtn"
+                class="add-cart-btn"
+            >
+                Add to Cart 🛒
+            </button>
+
+            <button
+                id="wishlistBtn"
+                class="wishlist-btn"
+            >
+                ♡
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- ==========================================
+     RECOMMENDED SHOES
+========================================== -->
+
+<section class="recommended-section">
+
+    <h2>
+        You May Also Like
+    </h2>
+
+    <p class="recommended-subtitle">
+        More kicks you might like
+    </p>
+
+
+    <div
+        id="recommendedProducts"
+        class="recommended-grid"
+    ></div>
+
+</section>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="storage.js"></script>
+
+<script>
+
+    const products = {
+
+        1: {
+            name: "Nike Mercurial Superfly 11 Elite",
+            price: 305,
+            image: "fotos/ZM+SUPERFLY+11+PRO+FG+KM.avif",
+            description: "Firm-Ground High-Top Soccer Cleats"
+        },
+
+        2: {
+            name: "Nike Mercurial Vapor 17 Elite SE",
+            price: 275,
+            image: "fotos/VAPOR+17+ACADEMY+FG_MG.avif",
+            description: "Firm-Ground Low-Top Soccer Cleats"
+        },
+
+        3: {
+            name: "Nike Mercurial Vapor 17 Elite SE",
+            price: 309.32,
+            image: "fotos/VAPOR+17+ELITE+AG-PRO+T+SE.avif",
+            description: "Firm-Ground Low-Top Football Boot"
+        },
+
+        4: {
+            name: "Nike Mercurial Superfly 11 Club",
+            price: 63.97,
+            image: "fotos/ZM+SUPERFLY+11+ELITE+AG-PRO+T.avif",
+            description: "Multi-Ground High-Top Soccer Cleats"
+        },
+
+        5: {
+            name: "Nike Phantom GX II Academy Erling Haaland",
+            price: 305,
+            image: "fotos/PHANTOM+6+LOW+ACAD+FG_MG+EH.avif",
+            description: "Multi-Ground Low-Top Soccer Cleats"
+        },
+
+        6: {
+            name: "Nike Phantom GX II Elite",
+            price: 275,
+            image: "fotos/PHANTOM+6+LOW+ELITE+AG-PRO (1).avif",
+            description: "Artificial-Grass Low-Top Soccer Cleats"
+        },
+
+        7: {
+            name: "Nike Phantom GX II Elite",
+            price: 309.32,
+            image: "fotos/PHANTOM+6+LOW+ELITE+FG (1).avif",
+            description: "Firm-Ground Low-Top Soccer Cleats"
+        },
+
+        8: {
+            name: "Nike Zoom Mercurial Superfly 10 Elite",
+            price: 63.97,
+            image: "fotos/ZM+SUPERFLY+11+ELITE+AG-PRO.avif",
+            description: "Artificial-Grass High-Top Soccer Cleats"
+        },
+
+        9: {
+            name: "Nike Zoom Mercurial Vapor 16 Elite",
+            price: 220,
+            image: "fotos/ZM+SUPERFLY+11+ELITE+AG-PRO+T.avif",
+            description: "Firm-Ground Low-Top Soccer Cleats"
+        },
+
+        10: {
+            name: "Nike Mercurial Superfly II SE 'CR7 Rare Gold'",
+            price: 250,
+            image: "fotos/MERCURIAL+SUPERFLY+RGN+FG+SE.avif",
+            description: "Firm-Ground High-Top Soccer Cleats"
+        },
+
+        11: {
+            name: "Nike Zoom Vapor 16 Academy IC",
+            price: 220,
+            image: "fotos/ZOOM+VAPOR+16+ACADEMY+IC.avif",
+            description: "Indoor/Court Soccer Shoes"
+        },
+
+        12: {
+            name: "Nike Zoom Mercurial Superfly 10 Academy 'KM'",
+            price: 250,
+            image: "fotos/ZM+SUPERFLY+11+PRO+FG+KM.avif",
+            description: "Multi-Ground High-Top Soccer Cleats"
+        },
+
+        13: {
+            name: "Nike Mercurial Vapor 16 Elite",
+            price: 275,
+            image: "fotos/idk/ZM+SUPERFLY+10+ELITE+FG.avif",
+            description: "Firm-Ground Low-Top"
+        },
+
+        14: {
+            name: "Nike Mercurial Superfly 10 Elite",
+            price: 309.32,
+            image: "fotos/idk/PHANTOM+GX+II+ELITE+FG+LV8.avif",
+            description: "Firm-Ground High-Top"
+        },
+
+        15: {
+            name: "Nike Zoom Mercurial Superfly 10 Elite",
+            price: 63.97,
+            image: "fotos/idk/ZM+SUPERFLY+10+ELITE+KM+FG.avif",
+            description: "Firm-Ground High-Top"
+        },
+
+        16: {
+            name: "Nike Zoom Mercurial Vapor 16 Elite FG",
+            price: 220,
+            image: "fotos/idk/ZM+VAPOR+16+ELITE+F+FG.avif",
+            description: "Firm-Ground Low-Top"
+        },
+
+        17: {
+            name: "Nike Phantom 6 Low Academy",
+            price: 250,
+            image: "fotos/idk/PHANTOM+6+LOW+ACAD+IC+T.avif",
+            description: "Indoor Court Football Shoes"
+        },
+
+        18: {
+            name: "Nike Tiempo Maestro Elite",
+            price: 220,
+            image: "fotos/idk/TIEMPO+MAESTRO+ELITE+SG-PRO.avif",
+            description: "Soft-Ground Low-Top Football Boot"
+        },
+
+        19: {
+            name: "Nike Mercurial Superfly 11 Elite",
+            price: 250,
+            image: "fotos/idk/ZM+SUPERFLY+11+ELITE+FG.avif",
+            description: "Artificial-Grass Low-Top Football Boots"
+        },
+
+        20: {
+            name: "Nike Tiempo Ligera Pro",
+            price: 305,
+            image: "fotos/idk/TIEMPO+LIGERA+PRO+HG+T.avif",
+            description: "Hard-Ground Low-Top Football Boot"
+        },
+        21: {
+            name: "Nike Phantom Academy",
+            price: 105,
+            image: "fotos/PHANTOM+6+LOW+ACAD+FG_MG+EH.avif",
+            description: "Multi-Ground Low-Top Soccer Cleats"
+        },
+
+        22: {
+            name: "Nike Mercurial Vapor Academy",
+            price: 120,
+            image: "fotos/VAPOR+17+ACADEMY+FG_MG.avif",
+            description: "Multi-Ground Low-Top Soccer Cleats"
+        },
+
+        23: {
+            name: "Nike Mercurial Superfly",
+            price: 135,
+            image: "fotos/ZM+SUPERFLY+11+ELITE+AG-PRO.avif",
+            description: "Artificial-Grass High-Top Soccer Cleats"
+        },
+
+        24: {
+            name: "Nike Zoom Vapor Academy",
+            price: 95,
+            image: "fotos/ZOOM+VAPOR+16+ACADEMY+IC.avif",
+            description: "Indoor/Court Soccer Shoes"
+        }
+    };
+
+
+    // ==========================================
+    // GET PRODUCT ID
+    // ==========================================
+
+    const urlParams = new URLSearchParams(
+        window.location.search
+    );
+
+    const productId = urlParams.get("id");
+
+    const product = products[productId];
+
+
+    // ==========================================
+    // QUANTITY
+    // ==========================================
+
+    let quantity = 1;
+
+    const quantityText =
+        document.getElementById("quantity");
+
+    const minusBtn =
+        document.getElementById("minusBtn");
+
+    const plusBtn =
+        document.getElementById("plusBtn");
+
+
+    minusBtn.onclick = function () {
+
+        if (quantity > 1) {
+
+            quantity--;
+
+            quantityText.textContent = quantity;
+
+        }
+
+    };
+
+
+    plusBtn.onclick = function () {
+
+        if (quantity < 99) {
+
+            quantity++;
+
+            quantityText.textContent = quantity;
+
+        }
+
+    };
+
+
+    // ==========================================
+    // DISPLAY PRODUCT
+    // ==========================================
+
+    if (!product) {
+
+        document.body.innerHTML = `
+
+            <div style="
+                text-align:center;
+                padding:200px 20px;
+                font-family:Lexend;
+            ">
+
+                <h1>Product not found</h1>
+
+                <a href="introduction.html">
+                    Go back
+                </a>
+
+            </div>
+
+        `;
+
+    } else {
+
+        document.getElementById("productId").textContent =
+            "Product #" + productId;
+
+        document.getElementById("productName").textContent =
+            product.name;
+
+        document.getElementById("productDescription").textContent =
+            product.description;
+
+        document.getElementById("productPrice").textContent =
+            "$" + product.price.toFixed(2);
+
+        document.getElementById("productImage").src =
+            product.image;
+
+        document.getElementById("productImage").alt =
+            product.name;
+
+
+        // ==========================================
+        // ADD TO CART
+        // ==========================================
+
+        document.getElementById("addCartBtn").onclick = function () {
+
+            for (let i = 0; i < quantity; i++) {
+
+                addToCart({
+
+                    id: Number(productId),
+
+                    name: product.name,
+
+                    price: product.price,
+
+                    image: product.image
+
+                });
+
+            }
+
+            alert(
+                quantity +
+                " × " +
+                product.name +
+                " added to cart!"
+            );
+
+        };
+
+
+        // ==========================================
+        // WISHLIST
+        // ==========================================
+
+        document.getElementById("wishlistBtn").onclick = function () {
+
+            addToWishlist({
+
+                id: Number(productId),
+
+                name: product.name,
+
+                price: product.price,
+
+                image: product.image
+
+            });
+
+        };
+
+
+        // ==========================================
+        // RECOMMENDED PRODUCTS
+        // ==========================================
+
+        const recommendedContainer =
+            document.getElementById(
+                "recommendedProducts"
+            );
+
+
+        const productIds =
+            Object.keys(products);
+
+
+        // Shuffle products
+
+        const shuffled =
+            productIds.sort(
+                () => Math.random() - 0.5
+            );
+
+
+        // Pick 4 different products
+
+        const recommended =
+            shuffled
+                .filter(id => id !== productId)
+                .slice(0, 4);
+
+
+        recommended.forEach(id => {
+
+            const item = products[id];
+
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "recommended-card";
+
+
+            card.innerHTML = `
+
+                <a
+                    href="product.html?id=${id}"
+                    class="recommended-link"
+                >
+
+                    <div class="recommended-image">
+
+                        <img
+                            src="${item.image}"
+                            alt="${item.name}"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p>
+                        ${item.description}
+                    </p>
+
+                    <strong>
+                        $${item.price.toFixed(2)}
+                    </strong>
+
+                </a>
+
+            `;
+
+
+            recommendedContainer.appendChild(card);
+
+        });
+
+    }
+// ==========================================
+// UPDATE NAVBAR
+// ==========================================
+
+updateNavbar();
+</script>
+
+
+</body>
+
+</html>

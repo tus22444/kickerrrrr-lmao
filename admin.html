@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kicker - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="kicker-logo">
+    <a href="introduction.html">
+        <img src="fotos/ssasa.png" alt="Kicker">
+        Kicker
+    </a>
+</div>
+
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <button onclick="showSection('dashboard')">
+            🏠 Dashboard
+        </button>
+
+        <button onclick="showSection('products')">
+            📦 Products
+        </button>
+
+        <button onclick="showSection('users')">
+            👥 Users
+        </button>
+
+        <button onclick="showSection('orders')">
+            🛒 Orders
+        </button>
+
+        <button onclick="showSection('profile')">
+            👤 Admin Profile
+        </button>
+
+        <button onclick="logout()">
+            🚪 Log Out
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section">
+
+            <h2>Dashboard</h2>
+
+            <p>
+                Welcome back, <span id="adminName"></span> 👋
+            </p>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <h3>Products</h3>
+                    <p id="productCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Users</h3>
+                    <p id="userCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Orders</h3>
+                    <p id="orderCount">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+        <section id="products" class="section hidden">
+
+            <h2>Products</h2>
+
+            <button class="add-btn" onclick="showAddProduct()">
+                + Add Product
+            </button>
+
+            <div id="productList"></div>
+
+        </section>
+
+
+        <!-- ADD PRODUCT -->
+        <section id="addProduct" class="section hidden">
+
+            <h2>Add Product</h2>
+
+            <form onsubmit="addProduct(event)">
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Price"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="productImage"
+                    placeholder="Image path"
+                    required
+                >
+
+                <select id="productCategory">
+
+                    <option value="kids">Kids</option>
+                    <option value="women">Women</option>
+                    <option value="men">Men</option>
+                    <option value="unisex">Unisex</option>
+                    <option value="under500">Under $500</option>
+                    <option value="new-arrivals">New Arrivals</option>
+
+                </select>
+
+                <textarea
+                    id="productDescription"
+                    placeholder="Product description"
+                ></textarea>
+
+                <button type="submit">
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- USERS -->
+        <section id="users" class="section hidden">
+
+            <h2>Users</h2>
+
+            <div id="userList"></div>
+
+        </section>
+
+
+        <!-- ORDERS -->
+        <section id="orders" class="section hidden">
+
+            <h2>Orders</h2>
+
+            <div id="orderList"></div>
+
+        </section>
+
+
+        <!-- PROFILE -->
+        <section id="profile" class="section hidden">
+
+            <h2>Admin Profile</h2>
+
+            <div id="adminProfile"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="storage.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+</html>
